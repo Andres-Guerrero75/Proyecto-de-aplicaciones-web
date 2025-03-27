@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LPP | Web Innovadora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gradient-to-br from-[#0a192f] via-[#1e334d] to-[#0a192f] text-[#ccd6f6]">
+    <header class="sticky top-0 z-20 bg-[#0a192f]/95 backdrop-blur-md shadow-lg">
+      <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+        <div class="flex items-center gap-4">
+          <img src="imagenes/taza1.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-[#64ffda] shadow-md hover:scale-110 transition-transform duration-300" />
+          <h1 class="text-2xl font-bold tracking-tight text-[#64ffda]">LPP</h1>
+        </div>
+        <nav>
+          <ul class="flex items-center gap-6 text-lg font-medium">
+            <li><a href="index.html" class="px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d]/50 rounded-lg transition-all duration-300">Inicio</a></li>
+            <li class="relative group">
+              <a href="#" class="px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d]/50 rounded-lg transition-all duration-300">Herramientas</a>
+              <div class="absolute left-0 hidden group-hover:block bg-[#0a192f] min-w-[180px] rounded-lg shadow-xl border border-[#64ffda]/30 z-10">
+                <a href="chatGPT.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">ChatBot</a>
+                <a href="consultas.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Consultas</a>
+                <a href="audio.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Audio</a>
+              </div>
+            </li>
+            <li class="relative group">
+              <a href="#" class="px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d]/50 rounded-lg transition-all duration-300">Diseño</a>
+              <div class="absolute left-0 hidden group-hover:block bg-[#0a192f] min-w-[180px] rounded-lg shadow-xl border border-[#64ffda]/30 z-10">
+                <a href="transiciones.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Transiciones</a>
+                <a href="columnas.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Columnas</a>
+                <a href="degradado.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Degradado</a>
+                <a href="animaciones.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Animaciones</a>
+              </div>
+            </li>
+            <li class="relative group">
+              <a href="#" class="px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d]/50 rounded-lg transition-all duration-300">Técnicas</a>
+              <div class="absolute left-0 hidden group-hover:block bg-[#0a192f] min-w-[180px] rounded-lg shadow-xl border border-[#64ffda]/30 z-10">
+                <a href="lPP.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">LPP</a>
+                <a href="SVG.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">SVG</a>
+                <a href="moviles.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Móviles</a>
+                <a href="flotantes.html" class="block px-4 py-2 hover:text-[#64ffda] hover:bg-[#1e334d] transition-all duration-300">Flotantes</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="flex-grow max-w-6xl mx-auto py-12 px-6">
+      <section class="bg-[#1e334d]/20 backdrop-blur-md rounded-xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center mb-6 text-[#64ffda]">Editor de Pseudocódigo</h2>
+        <p class="text-center max-w-xl mx-auto mb-8 opacity-90 text-[#8892b0]">Escribe y prueba tu pseudocódigo en un entorno intuitivo y elegante.</p>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <textarea id="codeInput" class="w-full h-48 p-4 bg-[#0a192f] rounded-lg border border-[#64ffda]/50 focus:outline-none focus:ring-2 focus:ring-[#64ffda] text-[#ccd6f6] placeholder-[#8892b0] resize-none" placeholder="Escribe tu pseudocódigo aquí..."></textarea>
+          <button id="runButton" class="w-full bg-[#64ffda] text-[#0a192f] py-3 rounded-full font-semibold shadow-md hover:bg-[#4dddc4] transition-all duration-300">Ejecutar</button>
+          <div id="consoleOutput" class="w-full h-48 p-4 bg-[#0a192f] rounded-lg border border-[#64ffda]/50 shadow-inner overflow-y-auto"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#0a192f]/95 backdrop-blur-md py-6 text-center border-t border-[#64ffda]/30">
+      <p class="opacity-80 text-[#8892b0]">© <span id="año"></span> noob 😎</p>
+    </footer>
+    <script src="src/fecha.js"></script>
+    <script src="src/lpp.js"></script>
+  </body>
+</html>
